@@ -63,7 +63,7 @@ html, body {
 
 // Base Font Sizes
 @defaultFontSize: 67.5%;
-@mobileFontSize: 150%;
+@mobileFontSize: 77.5%;
 
 @h1FontSize: 3.6rem;
 @h2FontSize: 2.4rem;
@@ -143,6 +143,7 @@ em {
 
 	@media(max-width: @mobileBreakpoint) {
 		max-width: @maxWidthMobile;
+		padding: 1.6rem 2.4rem;
 	}
 }
 
@@ -209,13 +210,24 @@ em {
 		display: flex;
 		justify-content: space-between;
 		margin: 1.6rem 0;
+
+		@media(max-width: @mobileBreakpoint) {
+			flex-direction: column;
+		}
 	}
+
+	
 }
 
 // Exp Blocks
 .main-container {
 	div.exp-block {
 		width: 47.5%;
+
+		@media(max-width: @mobileBreakpoint) {
+			margin-bottom: 1.6rem;
+			width: 100%;
+		}
 	}
 
 	.exp-block h4:nth-of-type(1) {
@@ -225,6 +237,8 @@ em {
 	.exp-block h4:nth-of-type(2) {
 		color: @secondaryColor;
 	}
+
+	
 }
 
 // Footer Section
@@ -234,6 +248,10 @@ em {
 		justify-content: space-between;
 		width: 60%;
 		padding-top: 1.6rem;
+
+		@media(max-width: @mobileBreakpoint) {
+			width: 100%;
+		}
 	}
 
 	.contact-details p {

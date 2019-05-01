@@ -80,6 +80,10 @@ html, body {
 // Breakpoints
 @mobileBreakpoint: 500px;
 
+// Font Family
+@bodyFontFamily: "Nunito Sans", Helvetica, sans-serif;
+@titleFontFamily: 'Sriracha', cursive;
+
 // Colors
 @primaryColor  : #2e3141;
 @secondaryColor: #c1a581;
@@ -149,12 +153,12 @@ html, body {
 // Main Config
 
 body {
-	font-family: "Nunito Sans", Helvetica, sans-serif;
+	font-family: @bodyFontFamily;
 	font-weight: 300;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Sriracha', cursive;
+    font-family: @titleFontFamily;
     font-weight: 600;
 }
 

@@ -2,6 +2,18 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@font-face {
+  font-family: 'Sriracha';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Sriracha'), local('Sriracha-Regular'), url(https://fonts.gstatic.com/s/sriracha/v3/0nkrC9D4IuYBgWcI9NbfTwQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Nunito Sans Regular'), local('NunitoSans-Regular'), url(https://fonts.gstatic.com/s/nunitosans/v4/pe0qMImSLYBIv1o4X1M8cce9I94.ttf) format('truetype');
+}
 html,
 body,
 div,
@@ -141,6 +153,19 @@ body {
   :root {
     font-size: 150%;
   }
+}
+body {
+  font-family: "Nunito Sans", Helvetica, sans-serif;
+  font-weight: 300;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Sriracha', cursive;
+  font-weight: 600;
 }
 h1 {
   font-size: 3.6rem;

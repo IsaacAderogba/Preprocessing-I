@@ -208,6 +208,17 @@ em {
     padding-right: 2.4000000000000004rem;
   }
 }
+.main-container header {
+  background-image: url("../img/birds_unsplash.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+@media (max-width: 500px) {
+  .main-container header {
+    background-image: none;
+  }
+}
 .main-container ul.nav-links {
   margin-bottom: 1.6rem;
 }

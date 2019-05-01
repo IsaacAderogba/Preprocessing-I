@@ -57,3 +57,44 @@ html, body {
 	height: 100%;
 }
 
+// Base Font Sizes
+@defaultFontSize: 67.5%;
+@mobileFontSize: 150%;
+
+@h1FontSize: 3.6rem;
+@h2FontSize: 2.4rem;
+@h3FontSize: 1.8rem;
+@h4FontSize: 1.4rem;
+@pFontSize: 1.6rem;
+
+// Max Width
+@maxWidthWebsite: 800px;
+@maxWidthMobile: 500px;
+
+// Breakpoints
+@mobileBreakpoint: 500px;
+
+// Colors
+@primaryColor  : #c1a581;
+@secondaryColor: #2e3141;
+@black         : black;
+@white         : white;
+
+// Root Config
+:root {
+	font-size: @defaultFontSize;
+  
+	@media(max-width: @mobileBreakpoint) {
+		font-size: @mobileFontSize;
+	}
+  }
+
+// Main Container
+.main-container {
+	max-width: @maxWidthWebsite;
+	border: 1px solid red;
+
+	@media(max-width: @mobileBreakpoint) {
+		max-width: @maxWidthMobile;
+	}
+}

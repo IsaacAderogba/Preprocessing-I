@@ -134,3 +134,20 @@ html,
 body {
   height: 100%;
 }
+:root {
+  font-size: 67.5%;
+}
+@media (max-width: 500px) {
+  :root {
+    font-size: 150%;
+  }
+}
+.main-container {
+  max-width: 800px;
+  border: 1px solid red;
+}
+@media (max-width: 500px) {
+  .main-container {
+    max-width: 500px;
+  }
+}

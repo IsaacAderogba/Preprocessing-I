@@ -30,7 +30,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
+	line-height: 1.4;
 }
 ol, ul {
 	list-style: none;
@@ -65,7 +65,7 @@ html, body {
 @h2FontSize: 2.4rem;
 @h3FontSize: 1.8rem;
 @h4FontSize: 1.4rem;
-@pFontSize: 1.6rem;
+@pFontSize: 1.4rem;
 
 // Max Width
 @maxWidthWebsite: 800px;
@@ -75,8 +75,9 @@ html, body {
 @mobileBreakpoint: 500px;
 
 // Colors
-@primaryColor  : #c1a581;
-@secondaryColor: #2e3141;
+@primaryColor  : #2e3141;
+@secondaryColor: #c1a581;
+@tertiaryColor: #808080;
 @black         : black;
 @white         : white;
 
@@ -89,12 +90,140 @@ html, body {
 	}
   }
 
-// Main Container
+
+// Main Config
+
+h1 {
+	font-size: @h1FontSize;
+	font-weight: bold;
+}
+
+h2 {
+	font-size: @h2FontSize;
+	font-weight: bold;
+}
+
+h3 {
+	font-size: @h3FontSize;
+	font-weight: bold;
+}
+
+h4 {
+	font-size: @h4FontSize;
+	font-weight: bold;
+}
+
+p, a {
+	font-size: @pFontSize;
+}
+
+em {
+	font-style: italic;
+}
+
 .main-container {
 	max-width: @maxWidthWebsite;
-	border: 1px solid red;
+	margin: 0 auto;
+	padding: 2.4rem 3.2rem;
+	border: 1px dotted @primaryColor;
 
 	@media(max-width: @mobileBreakpoint) {
 		max-width: @maxWidthMobile;
 	}
 }
+
+
+// Nav 
+.main-container {
+
+	ul.nav-links {
+		margin-bottom: 1.6rem;
+	}
+
+	li.nav-item {
+		display: inline-block;
+	}
+
+	.nav-item a {
+		text-decoration: none;
+		color: @secondaryColor;
+		padding-right: 1.6rem;
+	}
+
+	// Media Query
+}
+
+// Section - Hero
+
+.main-container {
+	
+	section.hero {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+	}
+}
+
+// Section - Left Hero
+.main-container {
+	.left-hero  {
+		color: @primaryColor;
+	}
+}
+
+// Section - Right Hero
+.main-container {
+	.right-hero img {
+		border-radius: 50%;
+	}
+}
+
+// Paragraph Intro Section
+.main-container {
+	section.intro {
+		background: @primaryColor;
+		color: @white;
+		text-align: center;
+		margin: 1.6rem 0;
+		padding: 0.8rem;
+	}
+}
+
+// Main Experience Section
+.main-container {
+	section.exp-section {
+		display: flex;
+		justify-content: space-between;
+		margin: 1.6rem 0;
+	}
+}
+
+// Exp Blocks
+.main-container {
+	div.exp-block {
+		width: 47.5%;
+	}
+
+	.exp-block h4:nth-of-type(1) {
+		color: @tertiaryColor;
+	}
+
+	.exp-block h4:nth-of-type(2) {
+		color: @secondaryColor;
+	}
+}
+
+// Footer Section
+.main-container {
+	footer.contact-details {
+		display: flex;
+		justify-content: space-between;
+		width: 60%;
+		padding-top: 1.6rem;
+	}
+
+	.contact-details p {
+		color: @secondaryColor;
+	}
+}
+

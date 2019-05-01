@@ -193,13 +193,19 @@ em {
 .main-container {
   max-width: 800px;
   margin: 0 auto;
-  padding: 2.4rem 3.2rem;
+  padding-top: 2.4000000000000004rem;
+  padding-bottom: 2.4000000000000004rem;
+  padding-left: 3.2rem;
+  padding-right: 3.2rem;
   border: 1px dotted #2e3141;
 }
 @media (max-width: 500px) {
   .main-container {
     max-width: 500px;
-    padding: 1.6rem 2.4rem;
+    padding-top: 1.6rem;
+    padding-bottom: 1.6rem;
+    padding-left: 2.4000000000000004rem;
+    padding-right: 2.4000000000000004rem;
   }
 }
 .main-container ul.nav-links {
@@ -228,13 +234,18 @@ em {
   background: #2e3141;
   color: white;
   text-align: center;
-  margin: 1.6rem 0;
-  padding: 0.8rem;
+  margin-top: 1.6rem;
+  margin-bottom: 1.6rem;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  padding-right: 0.8rem;
+  padding-left: 0.8rem;
 }
 .main-container section.exp-section {
   display: flex;
   justify-content: space-between;
-  margin: 1.6rem 0;
+  margin-top: 1.6rem;
+  margin-bottom: 1.6rem;
 }
 @media (max-width: 500px) {
   .main-container section.exp-section {

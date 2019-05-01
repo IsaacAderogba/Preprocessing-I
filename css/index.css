@@ -259,12 +259,14 @@ em {
 .main-container footer.contact-details {
   display: flex;
   justify-content: space-between;
-  width: 60%;
+  width: 80%;
   padding-top: 1.6rem;
 }
 @media (max-width: 500px) {
   .main-container footer.contact-details {
+    height: 200px;
     width: 100%;
+    flex-direction: column;
   }
 }
 .main-container .contact-details p {

@@ -96,6 +96,13 @@ html, body {
 	}
   }
 
+// Mixin for Flex-Space Between
+
+.flex-spacebetween() {
+	display: flex;
+	justify-content: space-between;
+}
+
 // Mixins for Padding
 .paddingTopMixin(@number) {
 	@remValue: (@paddingValue * @number);
@@ -262,8 +269,7 @@ em {
 // Main Experience Section
 .main-container {
 	section.exp-section {
-		display: flex;
-		justify-content: space-between;
+		.flex-spacebetween();
 		.marginTopMixin(2);
 		.marginBottomMixin(2);
 
@@ -300,8 +306,7 @@ em {
 // Footer Section
 .main-container {
 	footer.contact-details {
-		display: flex;
-		justify-content: space-between;
+		.flex-spacebetween();
 		width: 80%;
 		.paddingTopMixin(2);
 

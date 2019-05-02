@@ -4,6 +4,10 @@
    License: none (public domain)
 */
 
+// imports 
+@import url('https://fonts.googleapis.com/css?family=Sriracha');
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans');
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -30,7 +34,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
+	line-height: 1.4;
 }
 ol, ul {
 	list-style: none;
@@ -54,6 +58,285 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+}
+
+// Base Font Sizes
+@defaultFontSize: 67.5%;
+@mobileFontSize: 77.5%;
+
+@h1FontSize: 3.6rem;
+@h2FontSize: 2.4rem;
+@h3FontSize: 1.8rem;
+@h4FontSize: 1.4rem;
+@pFontSize: 1.4rem;
+@paddingValue: 0.8;
+@marginValue: 0.8;
+
+// Max Width
+@maxWidthWebsite: 800px;
+@maxWidthMobile: 500px;
+
+// Breakpoints
+@mobileBreakpoint: 500px;
+
+// Font Family
+@bodyFontFamily: "Nunito Sans", Helvetica, sans-serif;
+@titleFontFamily: 'Sriracha', cursive;
+
+// Colors
+@primaryColor  : #2e3141;
+@secondaryColor: #c1a581;
+@tertiaryColor: #808080;
+@black         : black;
+@white         : white;
+
+// Root Config
+:root {
+	font-size: @defaultFontSize;
+  
+	@media(max-width: @mobileBreakpoint) {
+		font-size: @mobileFontSize;
+	}
+  }
+
+// Mixin for Flex-Space Between
+
+.flex-spacebetween() {
+	display: flex;
+	justify-content: space-between;
+}
+
+// Mixins for Padding
+.paddingTopMixin(@number) {
+	@remValue: (@paddingValue * @number);
+	padding-top: ~"@{remValue}rem";
+}
+
+.paddingBottomMixin(@number) {
+	@remValue: (@paddingValue * @number);
+	padding-bottom: ~"@{remValue}rem";
+}
+
+.paddingLeftMixin(@number) {
+	@remValue: (@paddingValue * @number);
+	padding-left: ~"@{remValue}rem";
+}
+
+.paddingRightMixin(@number) {
+	@remValue: (@paddingValue * @number);
+	padding-right: ~"@{remValue}rem";
+}
+
+
+// Mixins for Margin
+.marginTopMixin(@number) {
+	@remValue: (@marginValue * @number);
+	margin-top: ~"@{remValue}rem";
+}
+
+.marginBottomMixin(@number) {
+	@remValue: (@marginValue * @number);
+	margin-bottom: ~"@{remValue}rem";
+}
+
+.marginLeftMixin(@number) {
+	@remValue: (@marginValue * @number);
+	margin-left: ~"@{remValue}rem";
+}
+
+.marginRightMixin(@number) {
+	@remValue: (@marginValue * @number);
+	margin-right: ~"@{remValue}rem";
+}
+
+// Main Config
+
+body {
+	font-family: @bodyFontFamily;
+	font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: @titleFontFamily;
+    font-weight: 600;
+}
+
+h1 {
+	font-size: @h1FontSize;
+	font-weight: bold;
+}
+
+h2 {
+	font-size: @h2FontSize;
+	font-weight: bold;
+}
+
+h3 {
+	font-size: @h3FontSize;
+	font-weight: bold;
+}
+
+h4 {
+	font-size: @h4FontSize;
+	font-weight: bold;
+}
+
+p, a {
+	font-size: @pFontSize;
+}
+
+em {
+	font-style: italic;
+}
+
+.main-container {
+	max-width: @maxWidthWebsite;
+	margin: 0 auto;
+
+	.paddingTopMixin(3);
+	.paddingBottomMixin(3);
+	.paddingLeftMixin(4);
+	.paddingRightMixin(4);
+
+	border: 1px dotted @primaryColor;
+
+	@media(max-width: @mobileBreakpoint) {
+		max-width: @maxWidthMobile;
+
+		.paddingTopMixin(2);
+		.paddingBottomMixin(2);
+		.paddingLeftMixin(3);
+		.paddingRightMixin(3);
+	}
+}
+
+// Header
+.main-container {
+	header {
+		background-image: url("../img/birds_unsplash.jpg");
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: right;
+
+		@media(max-width: @mobileBreakpoint) {
+			background-image: none;
+		}
+	}
+}
+
+// Nav 
+.main-container {
+
+	ul.nav-links {
+		.marginBottomMixin(2);
+	}
+
+	li.nav-item {
+		display: inline-block;
+	}
+
+	.nav-item a {
+		text-decoration: none;
+		color: @secondaryColor;
+		.paddingRightMixin(2);
+	}
+}
+
+// Section - Hero
+
+.main-container {
+	
+	section.hero {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+	}
+}
+
+// Section - Left Hero
+.main-container {
+	.left-hero  {
+		color: @primaryColor;
+	}
+}
+
+// Section - Right Hero
+.main-container {
+	.right-hero img {
+		border-radius: 50%;
+	}
+}
+
+// Paragraph Intro Section
+.main-container {
+	section.intro {
+		background: @primaryColor;
+		color: @white;
+		text-align: center;
+		.marginTopMixin(2);
+		.marginBottomMixin(2);
+
+		.paddingTopMixin(1);
+		.paddingBottomMixin(1);
+		.paddingRightMixin(1);
+		.paddingLeftMixin(1);
+	}
+}
+
+// Main Experience Section
+.main-container {
+	section.exp-section {
+		.flex-spacebetween();
+		.marginTopMixin(2);
+		.marginBottomMixin(2);
+
+		@media(max-width: @mobileBreakpoint) {
+			flex-direction: column;
+		}
+	}
+
+	
+}
+
+// Exp Blocks
+.main-container {
+	div.exp-block {
+		width: 47.5%;
+
+		@media(max-width: @mobileBreakpoint) {
+			.marginBottomMixin(2);
+			width: 100%;
+		}
+	}
+
+	.exp-block h4:nth-of-type(1) {
+		color: @tertiaryColor;
+	}
+
+	.exp-block h4:nth-of-type(2) {
+		color: @secondaryColor;
+	}
+
+	
+}
+
+// Footer Section
+.main-container {
+	footer.contact-details {
+		.flex-spacebetween();
+		width: 80%;
+		.paddingTopMixin(2);
+
+		@media(max-width: @mobileBreakpoint) {
+			height: 200px;
+			width: 100%;
+			flex-direction: column;
+		}
+	}
+
+	.contact-details p {
+		color: @secondaryColor;
+	}
 }
 

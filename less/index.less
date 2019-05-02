@@ -114,39 +114,39 @@ html, body {
 }
 
 .paddingBottomMixin(@number) {
-	@remValue: (@marginValue * @number);
+	@remValue: (@paddingValue * @number);
 	padding-bottom: ~"@{remValue}rem";
 }
 
 .paddingLeftMixin(@number) {
-	@remValue: (0.8 * @number);
+	@remValue: (@paddingValue * @number);
 	padding-left: ~"@{remValue}rem";
 }
 
 .paddingRightMixin(@number) {
-	@remValue: (0.8 * @number);
+	@remValue: (@paddingValue * @number);
 	padding-right: ~"@{remValue}rem";
 }
 
 
 // Mixins for Margin
 .marginTopMixin(@number) {
-	@remValue: (0.8 * @number);
+	@remValue: (@marginValue * @number);
 	margin-top: ~"@{remValue}rem";
 }
 
 .marginBottomMixin(@number) {
-	@remValue: (0.8 * @number);
+	@remValue: (@marginValue * @number);
 	margin-bottom: ~"@{remValue}rem";
 }
 
 .marginLeftMixin(@number) {
-	@remValue: (0.8 * @number);
+	@remValue: (@marginValue * @number);
 	margin-left: ~"@{remValue}rem";
 }
 
 .marginRightMixin(@number) {
-	@remValue: (0.8 * @number);
+	@remValue: (@marginValue * @number);
 	margin-right: ~"@{remValue}rem";
 }
 
